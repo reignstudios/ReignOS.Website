@@ -1,3 +1,3 @@
 # About
-Website for ReignOS images<br>
+Website for ReignOS<br>
 [Main Repo](https://github.com/reignstudios/ReignOS)
