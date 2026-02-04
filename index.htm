@@ -1,517 +1,512 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReignOS</title>
-    <link rel="icon" href="ReignOS_Icon.ico" type="image/x-icon">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            font-family: Arial, sans-serif;
-            background-color: #001b2e;
-        }
-        
-        .container {
-            text-align: center;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Centers all children horizontally */
-        }
-        
-        .splash-image {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-        }
-        
-        .download-btn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            margin-bottom: 10px;
-            text-decoration: none;
-            display: inline-block;
-            width: fit-content; /* Ensures button stays its natural width */
-        }
-        
-        .download-btn:hover {
-            background-color: #45a049;
-        }
-        
-        .description {
-            max-width: 600px;
-            color: #fff;
-            line-height: 1.6;
-        }
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="ReignOS_Icon.ico">
+		<link rel="stylesheet" href="style.css">
+		<title>ReignOS</title>
+	</head>
+	<body>
+		<header>
+			<img id="LogoImage" src="ReignOS.png" alt="ReignOS Logo">
+			<div id="MainLinks">
+				<div><a href="https://github.com/reignstudios/ReignOS/releases"><div id="Link_Download" class="LinkIcon"></div> Download</a></div>
+				<div><a href="https://1drv.ms/f/c/fba0605018c1795b/EoZJJn27sW9Fqfko2DX7A3cBCvjn4isyFUnEwCqUrCDHEQ?e=Ac9PgK"><div id="Link_OneDrive" class="LinkIcon"></div> OneDrive</a></div>
+				<div><a href="https://github.com/reignstudios/ReignOS"><div id="Link_GitHub" class="LinkIcon"></div> GitHub</a></div>
+				<div><a href="https://disboard.org/server/1344845464175902750"><div id="Link_Discord" class="LinkIcon"></div> Discord</a></div>
+			</div>
+		</header>
 
-        ul {
-            text-align: left;
-            border: 2px solid gray;
-            padding: 10px
-        }
-        
-        li {
-            margin-bottom: 10px;
-            margin: 10px
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <img src="ReignOS.png" alt="Splash Image" class="splash-image">
-        <a href="https://github.com/reignstudios/ReignOS/releases" class="download-btn">Download Now</a><br>
-        <a href="https://1drv.ms/f/c/fba0605018c1795b/EoZJJn27sW9Fqfko2DX7A3cBCvjn4isyFUnEwCqUrCDHEQ?e=Ac9PgK">OneDrive Mirror</a>
-        <p style="color: white;">
-            <a style="color: #45a049; font-weight: bold;" href="https://github.com/reignstudios/ReignOS">GitHub,</a>
-            <a style="color: #45a049; font-weight: bold;" href="https://disboard.org/server/1344845464175902750">Discord</a>
-        </p>
+		<section id="Description">
+			<p>ReignOS is a SteamOS / SteamDeck like rolling Arch distro but with its own unique take focused on general portability.</p>
+			<p>It's like ChimeraOS or BazziteOS but non-immutable and allows for newer or different kernels, drivers, options etc.</p>
+			<p>It supports <b>Gamescope</b>, <b>Weston</b>, <b>Cage</b>, <b>X11</b> and <b>KDE</b> compositors for better compatibility with some hardware.</p>
+		</section>
 
-        <div class="description">
-            ReignOS is a SteamOS / SteamDeck like rolling Arch distro but with its own unique take focused on general portability.
-            It supports Gamescope, Weston, Cage, X11 and KDE compositors for better compatibility with some hardware. In short ReignOS is similar to ChimeraOS or BazziteOS but is non-immutable and allows for newer or different kernels, drivers, options etc.
-        </div>
+		<div class="Border"></div>
 
-        <ul style="color: #ddd; border: none;">
-            <li>AMD, Intel and Nvidia GPUs supported</li>
-            <li>Hybrid-Graphics, mGPU and eGPU systems supported</li>
-            <!-- <li>Docks or multi-monitor options supported</li> -->
-            <li>Most General PC hardware should just work</li>
-            <li>Dual-Boot with Windows or other Linux distros</li>
-        </ul>
+		<section id="Overview">
+			<div class="Content">
+				<div id="KeyFeatures">
+					<h2>Key Features</h2>
+					<ul>
+						<li>AMD, Intel and Nvidia GPUs supported</li>
+						<li>Hybrid-Graphics, mGPU and eGPU systems supported</li>
+						<!-- <li>Docks or multi-monitor options supported</li> -->
+						<li>Most General PC hardware should just work</li>
+						<li>Dual-Boot with Windows or other Linux distros</li>
+					</ul>
+				</div>
 
-        <div>
-            <h2 style="color: #aaa; padding: 20px 0px 0px 0px;">Known working hardware</h2>
-            <ul style="color: #888;">
-                <li>Desktops, MiniPCs, Laptops etc</li>
-                <li>MSI-Claw AM1</li>
-                <li>MSI-Claw 7/8 AI+ A2VM</li>
-                <li>Asus ROG Ally (Z1, Z1 Extreme and X)</li>
-                <li>Legion Go (1, 2 and S)</li>
-                <li>Ayaneo devices (Slide, FlipDS, Kun, Ayaneo3 Magic Modules etc)</li>
-                <li>OneXPlayer devices (both AMD and Intel)</li>
-                <li>Antec devices (CoreHS)</li>
-                <li>Ayn devices (Loki Zero)</li>
-                <li>Aokzoe devices</li>
-                <li>Anbernic devices (Win600)</li>
-                <li>Zotac Zone</li>
-                <li>TJD 10.1" Handheld</li>
-            </ul>
-        </div>
+				<div id="WorkingHardware">
+					<h2>Working Hardware</h2>
+					<ul>
+						<li>Desktops, MiniPCs, Laptops etc</li>
+						<li>MSI-Claw AM1</li>
+						<li>MSI-Claw 7/8 AI+ A2VM</li>
+						<li>Asus ROG Ally (Z1, Z1 Extreme and X)</li>
+						<li>Legion Go (1, 2 and S)</li>
+						<li>Ayaneo devices (Slide, FlipDS, Kun, Ayaneo3 Magic Modules, etc)</li>
+						<li>OneXPlayer devices (both AMD and Intel)</li>
+						<li>Antec devices (CoreHS)</li>
+						<li>Ayn devices (Loki Zero)</li>
+						<li>Aokzoe devices</li>
+						<li>Anbernic devices (Win600)</li>
+						<li>Zotac Zone</li>
+						<li>TJD 10.1" Handheld</li>
+					</ul>
+				</div>
+			</div>
+		</section>
 
-        <div>
-            <h2 style="color: #aaa; padding: 20px 0px 0px 0px;">How to Install</h2>
-            <ul style="color: #888;">
-                <li>Download latest ISO image</li>
-                <li>Use <a href="https://etcher.balena.io/">Balena Etcher</a> to create bootable USB</li>
-                <li>NOTE: If 'Balena Etcher' fails, use <a href="https://fedoraproject.org/workstation/download">Fedora Media Writer</a> to reset the USB drive, then try again</li>
-                <li>Disable SecureBoot in your BIOS (Common keys are Esc, F2, Del)</li>
-                <li>If you're Dual-Booting with Windows, disable Windows Bitlocker or resize partitions with Windows DiskManager instead of Gparted</li>
-                <li>NOTE: If you want to boot from MicroSD card and its not supported in BIOS, you still can if you put ReignOS_EFI partition on main drive</li>
-                <li>Boot USB using a Dock or USB-Hub if installing on Handheld device</li>
-                <li>Follow on screen instructions</li>
-                <li>NOTE: After reboot there will be an extra 'FirstRun' install step (let it fully finish as it can take some time)</li>
-                <li>NOTE: If FirstRun fails, type "exit" and hit enter and it will try again</li>
-                <li>After installation is finished, its recomended to Sign-In to Steam via KDE first not Gamescope as it gives you more visual feedback</li>
-                <li>After installation, use KDE to configure extra storage in Steam</li>
-                <li>NOTE: If Steam is failing to open, you can click the "Reinstall Steam" button in Control-Center</li>
-            </ul>
-        </div>
+		<section id="HowToInstall">
+			<div class="Content">
+				<h2>How to Install</h2>
+				<ol>
+					<li>Download latest ISO image.</li>
+					<li>Use <a href="https://etcher.balena.io/">Balena Etcher</a> to create bootable USB.</li>
+					<li>NOTE: If 'Balena Etcher' fails, use <a href="https://fedoraproject.org/workstation/download">Fedora Media Writer</a> to reset the USB drive, then try again.</li>
+					<li>Disable SecureBoot in your BIOS (Common keys are Esc, F2, Del).</li>
+					<li>If you're Dual-Booting with Windows, disable Windows Bitlocker or resize partitions with Windows DiskManager instead of Gparted.</li>
+					<li>NOTE: If you want to boot from MicroSD card and its not supported in BIOS, you still can if you put ReignOS_EFI partition on main drive.</li>
+					<li>Boot USB using a Dock or USB-Hub if installing on Handheld device.</li>
+					<li>Follow on screen instructions.</li>
+					<li>NOTE: After reboot there will be an extra 'FirstRun' install step (let it fully finish as it can take some time).</li>
+					<li>NOTE: If FirstRun fails, type "exit" and hit enter and it will try again.</li>
+					<li>After installation is finished, its recomended to Sign-In to Steam via KDE first not Gamescope as it gives you more visual feedback.</li>
+					<li>After installation, use KDE to configure extra storage in Steam.</li>
+					<li>NOTE: If Steam is failing to open, you can click the "Reinstall Steam" button in Control-Center.</li>
+				</ol>
+			</div>
+		</section>
+		<section id="PostInstallNotes" class="Foot">
+			<div class="Content">
+				<h2>Post-Install Notes</h2>
+				<ul>
+					<li>Enable "MangoHud" in Control-Center to get FPS/TDP monitor overlays working.</li>
+					<li>You can use Control-Center to default to booting a particular compositor like Gamescope.</li>
+					<li>You can always return to Control-Center by exiting Steam (Switch to Desktop in Gamescope) or Logging out of KDE.</li>
+					<li>Look at "GPU Troubleshooting" if Control-Center is not launching (changing its compositor can resolve issue).</li>
+					<li>If you want Steams performance overlay functionality, enable MangeHud in Control-Center.</li>
+					<li>If you use HHD TDP control, you may need to use the Bazzite kernel as well.</li>
+					<li>Some Intel or Nvidia hardware can be more stable with Weston/Cage vs Gamescope (Like MSI-Claw devices).</li>
+					<li>Some older/slower hardware is more stable/faster with X11 (like Intel Atom).</li>
+					<li>ReignOS allows volume up to 150% but Steams volume interface caps at 100% visually.</li>
+				</ul>
+			</div>
+		</section>
 
-        <div>
-            <h2 style="color: #aaa; padding: 20px 0px 0px 0px;">Post-Install Notes</h2>
-            <ul style="color: #888;">
-                <li>Enable "MangoHud" in Control-Center to get FPS/TDP monitor overlays working.</li>
-                <li>You can use Control-Center to default to booting a particular compositor like Gamescope</li>
-                <li>You can always return to Control-Center by exiting Steam (Switch to Desktop in Gamescope) or Logging out of KDE</li>
-                <li>Look at "GPU Troubleshooting" if Control-Center is not launching (changing its compositor can resolve issue)</li>
-                <li>If you want Steams performance overlay functionality, enable MangeHud in Control-Center</li>
-                <li>If you use HHD TDP control, you may need to use the Bazzite kernel as well</li>
-                <li>Some Intel or Nvidia hardware can be more stable with Weston/Cage vs Gamescope (Like MSI-Claw devices)</li>
-                <li>Some older/slower hardware is more stable/faster with X11 (like Intel Atom)</li>
-                <li>ReignOS allows volume up to 150% but Steams volume interface caps at 100% visually</li>
-            </ul>
-        </div>
+		<div class="Border"></div>
 
-        <div>
-            <h2 style="color: #aaa; padding: 20px 0px 0px 0px;">Installer Troubleshooting</h2>
-            <ul style="color: #888;">
-                <li>Tethered networks may have issues (WiFi or Ethernet over Dock prefered)</li>
-                <li>If the install fails, hit the 'Exit' button which will cause it to restart installer without reboot</li>
-                <li>You can try with "Refresh Integrity" on/off (on normally better)</li>
-                <li>If the installer is not opening, hit Ctrl+C then type: './install.sh <-cage, -labwc, -weston or -x11>'</li>
-            </ul>
-        </div>
+		<section id="Troubleshooting">
+			<div class="Content">
+				<h2>Installer Troubleshooting</h2>
+				<ul>
+					<li>Tethered networks may have issues (WiFi or Ethernet over Dock prefered).</li>
+					<li>If the install fails, hit the 'Exit' button which will cause it to restart installer without reboot.</li>
+					<li>You can try with "Refresh Integrity" on/off (on normally better).</li>
+					<li>If the installer is not opening, hit Ctrl+C then type: <code>./install.sh <-cage, -labwc, -weston or -x11></code>.</li>
+				</ul>
+			</div>
+		</section>
 
-        <div>
-            <h2 style="color: #aaa; padding: 20px 0px 0px 0px;">Device specific fixes</h2>
-            <ul style="color: #888;">
-                <li>
-                    <b><u>Ayaneo Slide / Antec Core HS</u></b><br>
-                    <b>- Enable sleep support</b><br>
-                    <p style="padding-left: 20px; margin: 0;">
-                    * See "General Ayaneo Devices" below.<br>
-                    * NOTE: Slide/CoreHS only partially works correctly with S0i2 not S0i3<br>
+		<section id="DeviceFixes" class="Foot">
+			<div class="Content">
+				<h2>Device Specific Fixes</h2>
 
-                    <p style="padding-left: 0px; margin: 0;"></p>
-                    <b>- Fix random reboots</b><br>
-                    <p style="padding-left: 20px; margin: 0;">
-                    * In Control-Center make sure acpi=strict is checked<br>
-                    * Then make sure you reboot device once after install so this setting takes effect
+				<div class="DeviceInfo">
+					<h3>Ayaneo Slide / Antec Core HS</h3>
 
-                    <p style="padding-left: 0px; margin: 0;"></p>
-                    <b>- Stability recommendations</b><br>
-                    <p style="padding-left: 20px; margin: 0;">
-                    * TDP managers like HHD or DeckyTDP can cause stability issues on this hardware<br>
-                    * Its highly recomended to use "PowerProfiles" on this hardware which doesn't have the issue
-                </li>
-                <li>
-                    <b><u>Ayaneo Flip DS</u></b><br>
-                     <b>- Enable sleep support</b><br>
-                    <p style="padding-left: 20px; margin: 0;">
-                    * In Ayaneo <a href="https://www.ayaneo.com/support/download">downloads</a> you must use the BIOS labeled <a href="https://ayaneo-1305909189.cos.accelerate.myqcloud.com/ayaneo_com/download/2025/AYANEO_FLIP_DS_MS_20240117.zip">Support MS sleep</a><br>
+					<h4>Enable sleep support</h4>
+					<ul>
+						<li>See "General Ayaneo Devices" below.</li>
+						<li>NOTE: Slide/CoreHS only partially works correctly with <code>S0i2</code> not <code>S0i3</code>.</li>
+					</ul>
 
-                    <p style="padding-left: 0px; margin: 0;"></p>
-                    <b>- Fix Audio</b><br>
-                    <p style="padding-left: 20px; margin: 0;">
-                    * In Control-Center, use Bazzite Kernel and click Apply<br>
+					<h4>Fix random reboots</h4>
+					<ul>
+						<li>In Control-Center make sure <code>acpi=strict</code> is checked.</li>
+						<li>Then make sure you reboot device once after install so this setting takes effect.</li>
+					</ul>
 
-                    <p style="padding-left: 0px; margin: 0;"></p>
-                    <b>- Fix Default Display</b><br>
-                    <p style="padding-left: 20px; margin: 0;">
-                    * In Control-Center, use Display page to "Enable" a top display only<br>
-                    * In KDE, set both displays to 100% scaling<br>
+					<h4>Stability recommendations</h4>
+					<ul>
+						<li>TDP managers like HHD or DeckyTDP can cause stability issues on this hardware.</li>
+						<li>Its highly recomended to use "PowerProfiles" on this hardware which doesn't have the issue.</li>
+					</ul>
+				</div>
 
-                    <p style="padding-left: 0px; margin: 0;"></p>
-                    <b>- Fix Touchscreens</b><br>
-                    <p style="padding-left: 20px; margin: 0;">
-                    * In Control-Center, use Bazzite Kernel and click Apply<br>
-                    * In Control-Center, use InputPlumber and click Apply<br>
-                    * In KDE, open Settings->Touchscreen and set these in Device list<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;- Set Device 1 "Target display" to "(0,0 1920*1080)"<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;- Set Device 2 "Target display" to "(468,1080 960*640)"<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;- Set Device 3 "Target display" to "Automatic"<br>
+				<div class="DeviceInfo">
+					<h3>Ayaneo Flip DS</h3>
 
-                    <p style="padding-left: 0px; margin: 0;"></p>
-                    <b>- ReignOS Monitor app</b><br>
-                    <p style="padding-left: 20px; margin: 0;">
-                    * In Control-Center, enable ReignOS.Monitor<br>
-                    * Open KDE Desktop, open settings and search for "Window Rules"<br>
-                    * Add a rule and enter "ReignOS.Monitor" in "Window class" section<br>
-                    * Click "Add Property" and add "Screen" and make index 1<br>
-                    * Click "Add Property" and add "Fullscreen" and make it "Apply initially" to "Yes"<br>
-                </li>
-                <li>
-                    <b><u>Ayaneo Kun</u></b><br>
-                    <b>- Fix Audio</b><br>
-                    <p style="padding-left: 20px; margin: 0;">
-                    * In Control-Center, use Bazzite Kernel and click Apply<br>
-                </li>
-                <li>
-                    <b><u>Ayaneo 3</u></b><br>
-                    <b>- Magic Modules</b><br>
-                    <p style="padding-left: 20px; margin: 0;">
-                    * Control Center allows you to eject these with any kernel but Bazzite kernel recomended<br>
-                </li>
-                <li>
-                    <b><u>General Ayaneo Devices</u></b><br>
-                    <b>- Sleep not working</b><br>
-                    <p style="padding-left: 20px; margin: 0;">
-                    * Boot into BIOS<br>
-                    * Naviage to "AMD PBS->Power Saving Configurations"<br>
-                    * Change "S3 Enable" to "Modern Standby Enable"<br>
-                    * Make sure "Modern Standby Type" is set to "Modern Standby + S0i2 + S0i3" (or just "Modern Standby + S0i2" if S0i3 has issues)<br>
-                    * Save and exit<br>
-                    * NOTE: If your BIOS doesn't expose "AMD PBS" you can put <a href="https://github.com/DavidS95/Smokeless_UMAF/raw/main/UMAF_BETA.zip">Smokeless UMAF</a> on a FAT32 drive and boot it to access.<br>
+					<h4>Enable Sleep Support</h4>
+					<ul>
+						<li>In Ayaneo <a href="https://www.ayaneo.com/support/download">downloads</a> you must use the BIOS labeled <a href="https://ayaneo-1305909189.cos.accelerate.myqcloud.com/ayaneo_com/download/2025/AYANEO_FLIP_DS_MS_20240117.zip">Support MS sleep</a>.</li>
+					</ul>
 
-                    <p style="padding-left: 0px; margin: 0;"></p>
-                    <b>- Controller not working</b><br>
-                    <p style="padding-left: 20px; margin: 0;">
-                    * Some Ayaneo devices will sleep the controller. Simply hold 'B' button and it will come back on<br>
+					<h4>Fix Audio</h4>
+					<ul>
+						<li>In Control-Center, use Bazzite Kernel and click Apply.</li>
+					</ul>
 
-                    <p style="padding-left: 0px; margin: 0;"></p>
-                    <b>- Spamming audio alert in KDE</b><br>
-                    <p style="padding-left: 20px; margin: 0;">
-                    * Use Control-Center to switch to InputPlumber or HHD<br>
-                </li>
-                <li>
-                    <b><u>Rog Ally</u></b><br>
-                    <b>- Fix "Adjust Display Colors" settings</b><br>
-                    <p style="padding-left: 20px; margin: 0;">
-                    * Some hardware need a patched kernel for color tempature<br>
-                    * So in Control-Center, use Chimera, Bazzite or Cachy kernels<br>
-                </li>
-                <li>
-                    <b><u>General hardware</u></b><br>
-                    <b>- Fix Display Colors in Gamescope</b><br>
-                    <p style="padding-left: 20px; margin: 0;">
-                    * In Control-Center, click "Display" button<br>
-                    * In Display page under "Gamescope conf" click "Generate"<br>
-                    * In Gamescope->Display settings, click "Generate"<br><br>
+					<h4>Fix Default Display</h4>
+					<ul>
+						<li>In Control-Center, use Display page to "Enable" a top display only.</li>
+						<li>In KDE, set both displays to 100% scaling.</li>
+					</ul>
 
-                    <p style="padding-left: 0px; margin: 0;"></p>
-                    <b>- TDP</b><br>
-                    <p style="padding-left: 20px; margin: 0;">
-                    * HHD TDP may require Bazzite kernel to work<br><br>
+					<h4>Fix Touchscreens</h4>
+					<ul>
+						<li>In Control-Center, use Bazzite Kernel and click Apply.</li>
+						<li>In Control-Center, use InputPlumber and click Apply.</li>
+						<li>In KDE, open Settings->Touchscreen and set these in Device list.
+							<ol>
+								<li>Set Device 1 "Target display" to <code>(0,0 1920*1080)</code>.</li>
+								<li>Set Device 2 "Target display" to <code>(468,1080 960*640)</code>.</li>
+								<li>Set Device 3 "Target display" to <code>Automatic</code>.</li>
+							</ol>
+						</li>
+					</ul>
 
-                    <p style="padding-left: 0px; margin: 0;"></p>
-                    <b>- Extra WiFI Drivers</b><br>
-                    <p style="padding-left: 20px; margin: 0;">
-                    * yay -S rtl8812au-dkms-git<br>
-                    * yay -S rtl8814au-dkms-git<br>
-                    * yay -S rtl88x2bu-dkms-git<br>
-                    * yay -S rtl8821au-dkms-git<br>
-                </li>
-            </ul>
-        </div>
+					<h4>ReignOS Monitor App</h4>
+					<ul>
+						<li>In Control-Center, enable ReignOS.Monitor.</li>
+						<li>Open KDE Desktop, open settings and search for "Window Rules".</li>
+						<li>Add a rule and enter "ReignOS.Monitor" in "Window class" section.</li>
+						<li>Click "Add Property" and add "Screen" and make index 1.</li>
+						<li>Click "Add Property" and add "Fullscreen" and make it "Apply initially" to "Yes".</li>
+					</ul>
+				</div>
 
-        <div>
-            <h2 style="color: #aaa; padding: 20px 0px 0px 0px;">(User / Pass) Notes</h2>
-            <ul style="color: #888;">
-                <li>Linux User: 'gamer' (changing this can break operation)</li>
-                <li>Linux Pass: 'gamer' (changing this can break operation)</li>
-                <li>Linux root User: 'root' (changing this can break operation)</li>
-                <li>Linux root Pass: 'gamer' (changing this can break operation)</li>
-            </ul>
-        </div>
+				<div class="DeviceInfo">
+					<h3>Ayaneo Kun</h3>
+					<h4>Fix Audio</h4>
+					<ul>
+						<li>In Control-Center, use Bazzite Kernel and click Apply.</li>
+					</ul>
+				</div>
 
-        <div>
-            <h2 style="color: #aaa; padding: 20px 0px 0px 0px;">Auto mount internal drives</h2>
-            <ul style="color: #888;">
-                <li>In KDE, open "KDE Partition Manager"</li>
-                <li>Unmount the partition you want to change setting on if mounted</li>
-                <li>Right-Click on partition and click "Edit Mount Point"</li>
-                <li>Change "Path" to something like "/mnt/games</li>
-                <li>Click, ok then reboot to confirm working</li>
-                <li>
-                    Once mounted you may need to change permission to write drive<br>
-                    * Right-Click in mounted drive and "Open Terminal Here"<br>
-                    * sudo chown -R gamer:gamer ./<br>
-                    * sudo chmod -R u+rwX ./<br>
-                </li>
-            </ul>
-        </div>
+				<div class="DeviceInfo">
+					<h3>Ayaneo 3</h3>
+					<h4>Magic Modules</h4>
+					<ul>
+						<li>Control Center allows you to eject these with any kernel but Bazzite kernel recomended.</li>
+					</ul>
+				</div>
 
-        <div>
-            <h2 style="color: #aaa; padding: 20px 0px 0px 0px;">BIOS Notes</h2>
-            <ul style="color: #888;">
-                <li>Some Acer Laptops need 'Touchpad' in BIOS to be set to 'Basic' not 'Advanced' to work</li>
-                <li>Some Acer Laptops need you to set BIOS password before you can disable Secure-Boot</li>
-            </ul>
-        </div>
+				<div class="DeviceInfo">
+					<h3>General Ayaneo Devices</h3>
 
-        <div>
-            <h2 style="color: #aaa; padding: 20px 0px 0px 0px;">Control Center</h2>
-            <ul style="color: #888;">
-                <li>Select what compositor to boot with or set boot default</li>
-                <li>Set screen rotation</li>
-                <li>Manage Nvidia or AMD drivers</li>
-                <li>Boot Manager: This allows you to boot to Windows or any other OS</li>
-                <li>Network Manager: Allows you to manage WiFi connection</li>
-                <li>Disk Manager: Allows you to format extra game drives, like MicroSD cards etc</li>
-                <li>Display Manager: Allows you to configure default display etc</li>
-                <li>Audio Manager: Lets you set default audio device</li>
-                <li>Power Manager: Lets you configure power settings when using PowerProfiles</li>
-                <li>NOTE: Use KDE to sign into Steam if you have issues with others. Then try another.</li>
-            </ul>
-        </div>
+					<h4>Sleep not working</h4>
+					<ul>
+						<li>Boot into BIOS.</li>
+						<li>Naviage to "AMD PBS->Power Saving Configurations".</li>
+						<li>Change "S3 Enable" to "Modern Standby Enable".</li>
+						<li>Make sure "Modern Standby Type" is set to "Modern Standby + S0i2 + S0i3" (or just "Modern Standby + S0i2" if S0i3 has issues).</li>
+						<li>Save and exit.</li>
+						<li>NOTE: If your BIOS doesn't expose "AMD PBS" you can put <a href="https://github.com/DavidS95/Smokeless_UMAF/raw/main/UMAF_BETA.zip">Smokeless UMAF</a> on a FAT32 drive and boot it to access.</li>
+					</ul>
 
-        <div>
-            <h2 style="color: #aaa; padding: 20px 0px 0px 0px;">Compositors</h2>
-            <ul style="color: #888;">
-                <li>Gamescope: Same as SteamOS (Not all hardware supports this)</li>
-                <li>Weston: fullscreen compositor</li>
-                <li>Weston-W: Same as Weston but Windowed mode</li>
-                <li>Cage: wlroots fullscreen compositor</li>
-                <li>Labwc: wlroots compositor (Windowed option)</li>
-                <li>X11: Useful for some games or hardware</li>
-                <li>KDE-G: Gamemode (use KDE Desktop to configure settings)</li>
-                <li>KDE: Full Desktop mode</li>
-                <li>KDE-X11: Full Desktop mode but in X11</li>
-            </ul>
-        </div>
+					<h4>Controller not working</h4>
+					<ul>
+						<li>Some Ayaneo devices will sleep the controller. Simply hold 'B' button and it will come back on.</li>
+					</ul>
 
-        <div>
-            <h2 style="color: #aaa; padding: 20px 0px 0px 0px;">KDE</h2>
-            <ul style="color: #888;">
-                <li>Logout will bring you back to ControlCenter</li>
-                <li>If you want to install a 'full' KDE install run: sudo pacman -S kde-applications (then reboot)</li>
-                <li>To get recomended KDE Virtual keyboard run: yay -S maliit-keyboard</li>
-                <li>NOTE: Virtual Keybaord "maliit-keyboard" may need to be enabled in settings manually</li>
-                <li>
-                    KDE-G (Use KDE-Desktop to configure settings)<br>
-                     * Set default docking display if using a dock<br>
-                     * Configure VRR or HDR<br>
-                     * Disable Screen-Locks needing a keyboard<br>
-                     * Enable Hide-Cursor after a 5 second delay<br>
-                </li>
-            </ul>
-        </div>
+					<h4>- Spamming audio alert in KDE</h4>
+					<ul>
+						<li>Use Control-Center to switch to InputPlumber or HHD.</li>
+					</ul>
+				</div>
 
-        <div>
-            <h2 style="color: #aaa; padding: 20px 0px 0px 0px;">Optional Packages</h2>
-            <ul style="color: #888;">
-                <li>If you need GTK2 for legacy apps / games run: yay -S gtk2 lib32-gtk2</li>
-            </ul>
-        </div>
+				<div class="DeviceInfo">
+					<h3>Rog Ally</h3>
 
-        <div>
-            <h2 style="color: #aaa; padding: 20px 0px 0px 0px;">Known Dock Compatability</h2>
-            <ul style="color: #888;">
-                <li>SABRENT Docking Station for Steam Deck (Stable particularlly with MSI-Claw A1M)</li>
-                <li>Insignia™ - Rog Ally Docking Station (Stable with most devices)</li>
-                <li>Ayaneo Multi Station (Stable with Slide/CoreHS & probably others)</li>
-            </ul>
-        </div>
+					<h4>Fix "Adjust Display Colors" Settings</h4>
+					<ul>
+						<li>Some hardware need a patched kernel for color tempature.</li>
+						<li>So in Control-Center, use Chimera, Bazzite or Cachy kernels.</li>
+					</ul>
+				</div>
 
-        <div>
-            <h2 style="color: #aaa; padding: 20px 0px 0px 0px;">General Troubleshooting</h2>
-            <ul style="color: #888;">
-                <li>WiFi WP3 has issue with Linux atm (use WP2)</li>
-                <li>
-                    If you can't naviage out of something and need to turn the system off:<br>
-                    * Press: Ctrl+Alt+F3<br>
-                    * Enter User: root<br>
-                    * Enter Pass: gamer<br>
-                    * Type: 'poweroff -f' or 'reboot -f'
-                </li>
-        </div>
+				<div class="DeviceInfo">
+					<h3>General hardware</h3>
 
-        <div>
-            <h2 style="color: #aaa; padding: 20px 0px 0px 0px;">Power Tuning</h2>
-            <ul style="color: #888;">
-                <li>Cap FPS to 30fps in Gamescope</li>
-                <li>Power Profiles: Disable CPU Boosts or lower clocks etc</li>
-                <li>DeckyTDP: Disable CPU Boosts or lower TDP etc</li>
-                <li>Force FSR in game settings: gamescope -F fsr --fsr-sharpness 10 -W 1920 -H 1080 -w 1280 -h 720 -- %command%</li>
-                <li>Force NIS in game settings: gamescope -F nis --sharpness 10 -W 1920 -H 1080 -w 1280 -h 720 -- %command%</li>
-            </ul>
-        </div>
+					<h4>Fix Display Colors in Gamescope</h4>
+					<ul>
+						<li>In Control-Center, click "Display" button.</li>
+						<li>In Display page under "Gamescope conf" click "Generate".</li>
+						<li>In Gamescope->Display settings, click "Generate".</li>
+					</ul>
 
-        <div>
-            <h2 style="color: #aaa; padding: 20px 0px 0px 0px;">Proton Troubleshooting</h2>
-            <ul style="color: #888;">
-                <li>Linux/Proton Game compatability resource: <a href="https://www.protondb.com/">ProtonDB</a></li>
-                <li>
-                    If you're getting D3D12 Proton errors try this:<br>
-                    * Switch to experimental Proton (maybe other versions work)<br>
-                    * Set launch options to: "VKD3D_CONFIG=dxr VKD3D_FEATURE_LEVEL=12_2 VKD3D_SHADER_MODEL=6_6 %command%"<br>
-                </li>
-        </div>
+					<h4>TDP</h4>
+					<ul>
+						<li>HHD TDP may require Bazzite kernel to work.</li>
+					</ul>
 
-        <div>
-            <h2 style="color: #aaa; padding: 20px 0px 0px 0px;">GPU Troubleshooting</h2>
-            <ul style="color: #888;">
-                <li>
-                    Launch Control-Center with Cage, X11 or KDE-G:<br>
-                    * Exit to terminal<br>
-                    * Type: nano ReignOS_Launch.sh<br>
-                    * Add the argument '--controlcenter-cage' or '--controlcenter-x11' or '--controlcenter-kde-g' after '--use-controlcenter' arg<br>
-                    * NOTE: '--controlcenter-weston' is default<br>
-                    * Ctrl+X then Y to save<br>
-                    * Type: exit
-                </li>
-                <li>
-                    Change Nvidia drivers without Control-Center:<br>
-                    * Exit to terminal<br>
-                    * Type: cd ~/ReignOS/Managment/ReignOS.Bootloader/bin/Release/net8.0/linux-x64/publish<br>
-                    * Type: './Nvidia_Install_Nouveau.sh' or './Nvidia_Install_Proprietary.sh'<br>
-                    * NOTE: Same for AMD<br>
-                </li>
-                <li>Disable Steam GPU acceleration in Control-Center can work around some Nvidia issues</li>
-                <li>If you install Proprietary Nvidia drivers, make sure you see a driver listed in 'GPU Utils'</li>
-                <li>Some GPU drivers may have issues with MangoHud. (Disable if debugging issues)</li>
-                <li>Launch Steam in X11, try running a game, then exit. (This can fix Proton issues in Wayland)</li>
-            </ul>
-        </div>
+					<h4>Extra WiFI Drivers</h4>
+					<ul>
+						<li><code>yay -S rtl8812au-dkms-git</code></li>
+						<li><code>yay -S rtl8814au-dkms-git</code></li>
+						<li><code>yay -S rtl88x2bu-dkms-git</code></li>
+						<li><code>yay -S rtl8821au-dkms-git</code></li>
+					</ul>
+				</div>
+			</div>
+		</section>
 
-        <div>
-            <h2 style="color: #aaa; padding: 20px 0px 0px 0px;">Steam Troubleshooting</h2>
-            <ul style="color: #888;">
-                <li>
-                    If Steam is getting stuck on updates<br>
-                    * Launch KDE<br>
-                    * Launch terminal<br>
-                    * Type 'steam' and hit enter<br>
-                    * Each time it stops writing to terminal use KDE to close the update Window in the task bar<br>
-                    * Do this for each Window<br>
-                    * Eventually it should continue to login-screen etc
-                </li>
-                <li>If Steam Login is having issues on Gamescope, use the Weston, Cage etc compositor instead</li>
-                <li>Some games don't fully quit until you press the Guide/Xbox button.</li>
-            </ul>
-        </div>
+		<section>
+			<div class="Content">
+				<h2>(User / Pass) Notes</h2>
+				<ul>
+					<li>Linux User: <code>gamer</code> (changing this can break operation)</li>
+					<li>Linux Pass: <code>gamer</code> (changing this can break operation)</li>
+					<li>Linux root User: <code>root</code> (changing this can break operation)</li>
+					<li>Linux root Pass: <code>gamer</code> (changing this can break operation)</li>
+				</ul>
+			</div>
 
-        <div>
-            <h2 style="color: #aaa; padding: 20px 0px 0px 0px;">Bluetooth Troubleshooting</h2>
-            <ul style="color: #888;">
-                <li>Xbox Controllers may need their firmware updated from an Xbox or Windows device before they work correctly</li>
-            </ul>
-        </div>
+			<div class="Content">
+				<h2>Auto mount internal drives</h2>
+				<ul>
+					<li>In KDE, open <code>KDE Partition Manager</code>.</li>
+					<li>Unmount the partition you want to change setting on if mounted.</li>
+					<li>Right-Click on partition and click <code>Edit Mount Point</code>.</li>
+					<li>Change <code>Path</code> to something like <code>/mnt/games</code>.</li>
+					<li>Click OK then reboot to confirm working.</li>
+					<li>Once mounted you may need to change permission to write drive.
+						<ol>
+							<li>Right-Click in mounted drive and <code>Open Terminal Here</code></li>
+							<li><code>sudo chown -R gamer:gamer ./</code></li>
+							<li><code>sudo chmod -R u+rwX ./</code></li>
+						</ol>
+					</li>
+				</ul>
+			</div>
 
-        <div>
-            <h2 style="color: #aaa; padding: 20px 0px 0px 0px;">Update Troubleshooting</h2>
-            <ul style="color: #888;">
-                <li>
-                    If system is having 'pacman' update issues:<br>
-                    * Go to terminal and type these lines...<br>
-                    * sudo pacman -Sy<br>
-                    * sudo timedatectl set-ntp true<br>
-                    * sudo hwclock --systohc<br>
-                    * COUNTRY=$(curl -s https://ifconfig.co/country-iso)<br>
-                    * sudo reflector --country $COUNTRY --latest 50 --protocol https --sort rate --save /etc/pacman.d/mirrorlist<br>
-                    * sudo pacman -Syyu<br>
-                    * sudo pacman -Sy archlinux-keyring<br>
-                    * sudo pacman-key --init<br>
-                    * sudo pacman-key --populate archlinux<br>
-                    * sudo pacman-key --refresh-keys<br>
-                    * sudo pacman-key --updatedb<br>
-                    * sudo pacman -Syu<br>
-                    * yay -Syu<br>
-                    * reboot<br>
-                </li>
-                <li>
-                    If "Check Updates" button not working or Control-Center not launching<br>
-                    * Go to a terminal<br>
-                    * cd ReignOS/Management<br>
-                    * git pull<br>
-                    * dotnet publish -r linux-x64 -c Release<br>
-                    * exit
-                </li>
-                <li>
-                    Manually connect to WiFi<br>
-                    * iwctl device list (NOTE: this will get you devices like wlan0)<br>
-                    * iwctl station wlan0 scan<br>
-                    * iwctl station wlan0 get-networks<br>
-                    * iwctl station --passphrase '&lt;PASS&#62;' wlan0 connect '&lt;SSID&#62;'
-                </li>
-        </div>
+			<div class="Content">
+				<h2>BIOS Notes</h2>
+				<ul>
+					<li>Some Acer Laptops need 'Touchpad' in BIOS to be set to 'Basic' not 'Advanced' to work</li>
+					<li>Some Acer Laptops need you to set BIOS password before you can disable Secure-Boot</li>
+				</ul>
+			</div>
 
-        <div>
-            <h2 style="color: #aaa; padding: 20px 0px 0px 0px;">Virtual Box</h2>
-            <ul style="color: #888;">
-                <li>
-                    Virtual Box is not really tested but you should run these commands if you're using it<br>
-                    * sudo pacman -S virtualbox-guest-utils<br>
-                    * sudo modprobe vboxguest<br>
-                    * sudo modprobe vboxsf<br>
-                    * sudo modprobe vboxvideo<br>
-                    * sudo systemctl enable vboxservice.service<br>
-                    * reboot<br>
-                </li>
-            </ul>
-        </div>
-    </div>
-</body>
+			<div class="Content">
+				<h2>Control Center</h2>
+				<ul>
+					<li>Select what compositor to boot with or set boot default.</li>
+					<li>Set screen rotation.</li>
+					<li>Manage Nvidia or AMD drivers.</li>
+					<li>Boot Manager: This allows you to boot to Windows or any other OS.</li>
+					<li>Network Manager: Allows you to manage WiFi connection.</li>
+					<li>Disk Manager: Allows you to format extra game drives, like MicroSD cards etc.</li>
+					<li>Display Manager: Allows you to configure default display etc.</li>
+					<li>Audio Manager: Lets you set default audio device.</li>
+					<li>Power Manager: Lets you configure power settings when using PowerProfiles.</li>
+					<li>NOTE: Use KDE to sign into Steam if you have issues with others. Then try another.</li>
+				</ul>
+			</div>
+
+			<div class="Content">
+				<h2>Compositors</h2>
+				<ul>
+					<li><code>Gamescope</code>: Same as SteamOS (Not all hardware supports this)</li>
+					<li><code>Weston</code>: fullscreen compositor</li>
+					<li><code>Weston-W</code>: Same as Weston but Windowed mode</li>
+					<li><code>Cage</code>: wlroots fullscreen compositor</li>
+					<li><code>Labwc</code>: wlroots compositor (Windowed option)</li>
+					<li><code>X11</code>: Useful for some games or hardware</li>
+					<li><code>KDE-G</code>: Gamemode (use KDE Desktop to configure settings)</li>
+					<li><code>KDE</code>: Full Desktop mode</li>
+					<li><code>KDE-X11</code>: Full Desktop mode but in X11</li>
+				</ul>
+			</div>
+
+			<div class="Content">
+				<h2>KDE</h2>
+				<ul>
+					<li>Logout will bring you back to ControlCenter</li>
+					<li>If you want to install a 'full' KDE install run: sudo pacman -S kde-applications (then reboot)</li>
+					<li>To get recomended KDE Virtual keyboard run: yay -S maliit-keyboard</li>
+					<li>NOTE: Virtual Keybaord "maliit-keyboard" may need to be enabled in settings manually</li>
+					<li><code>KDE-G</code> (Use KDE-Desktop to configure settings)
+						<ol>
+							<li>Set default docking display if using a dock.</li>
+							<li>Configure VRR or HDR.</li>
+							<li>Disable Screen-Locks needing a keyboard.</li>
+							<li>Enable Hide-Cursor after a 5 second delay.</li>
+						</ol>
+					</li>
+				</ul>
+			</div>
+
+			<div class="Content">
+				<h2>Optional Packages</h2>
+				<ul>
+					<li>If you need GTK2 for legacy apps / games run: <code>yay -S gtk2 lib32-gtk2</code>.</li>
+				</ul>
+			</div>
+
+			<div class="Content">
+				<h2>Known Dock Compatability</h2>
+				<ul>
+					<li>SABRENT Docking Station for Steam Deck (Stable particularlly with MSI-Claw A1M).</li>
+					<li>Insignia™ - Rog Ally Docking Station (Stable with most devices).</li>
+					<li>Ayaneo Multi Station (Stable with Slide/CoreHS & probably others).</li>
+				</ul>
+			</div>
+
+			<div class="Content">
+				<h2>General Troubleshooting</h2>
+				<ul>
+					<li>WiFi WP3 has issue with Linux atm (use WP2)</li>
+					<li>If you can't naviage out of something and need to turn the system off:
+						<ol>
+							<li>Press: <code>Ctrl</code> + <code>Alt</code> + <code>F3</code></li>
+							<li>Enter User: <code>root</code></li>
+							<li>Enter Pass: <code>gamer</code></li>
+							<li>Type: <code>poweroff -f</code> or <code>reboot -f</code>.</li>
+						</ol>
+					</li>
+				</ul>
+			</div>
+
+			<div class="Content">
+				<h2>Power Tuning</h2>
+				<ul>
+					<li>Cap FPS to 30fps in Gamescope</li>
+					<li>Power Profiles: Disable CPU Boosts or lower clocks etc.</li>
+					<li>DeckyTDP: Disable CPU Boosts or lower TDP etc.</li>
+					<li>Force FSR in game settings: <code>gamescope -F fsr --fsr-sharpness 10 -W 1920 -H 1080 -w 1280 -h 720 -- %command%</code></li>
+					<li>Force NIS in game settings: <code>gamescope -F nis --sharpness 10 -W 1920 -H 1080 -w 1280 -h 720 -- %command%</code></li>
+				</ul>
+			</div>
+
+			<div class="Content">
+				<h2>Proton Troubleshooting</h2>
+				<ul>
+					<li>Linux/Proton Game compatability resource: <a href="https://www.protondb.com/">ProtonDB</a></li>
+					<li>If you're getting D3D12 Proton errors try this:
+						<ol>
+							<li>Switch to experimental Proton (maybe other versions work).</li>
+							<li>Set launch options to: <code>VKD3D_CONFIG=dxr VKD3D_FEATURE_LEVEL=12_2 VKD3D_SHADER_MODEL=6_6 %command%</code></li>
+						</ol>
+					</li>
+				</ul>
+			</div>
+
+			<div class="Content">
+				<h2>GPU Troubleshooting</h2>
+				<ul>
+					<li>Launch Control-Center with Cage, X11 or KDE-G:
+						<ol>
+							<li>Exit to terminal.</li>
+							<li>Type: <code>nano ReignOS_Launch.sh</code>.</li>
+							<li>Add the argument <code>--controlcenter-cage</code> or <code>--controlcenter-x11</code> or <code>--controlcenter-kde-g</code> after <code>--use-controlcenter</code> arg.</li>
+							<li>NOTE: <code>--controlcenter-weston</code> is default.</li>
+							<li>Ctrl+X then Y to save.</li>
+							<li>Type: <code>exit</code>.</li>
+						</ol>
+					</li>
+					<li>Change Nvidia drivers without Control-Center:
+						<ol>
+							<li>Exit to terminal.</li>
+							<li>Type: <code>cd ~/ReignOS/Managment/ReignOS.Bootloader/bin/Release/net8.0/linux-x64/publish</code>.</li>
+							<li>Type: <code>'./Nvidia_Install_Nouveau.sh'</code> or <code>'./Nvidia_Install_Proprietary.sh'</code>.</li>
+							<li>NOTE: Same for AMD.</li>
+						</ol>
+					</li>
+					<li>Disable Steam GPU acceleration in Control-Center can work around some Nvidia issues.</li>
+					<li>If you install Proprietary Nvidia drivers, make sure you see a driver listed in 'GPU Utils'.</li>
+					<li>Some GPU drivers may have issues with MangoHud. (Disable if debugging issues).</li>
+					<li>Launch Steam in X11, try running a game, then exit. (This can fix Proton issues in Wayland).</li>
+				</ul>
+			</div>
+
+			<div class="Content">
+				<h2>Steam Troubleshooting</h2>
+				<ul>
+					<li>If Steam is getting stuck on updates:
+						<ol>
+							<li>Launch KDE.</li>
+							<li>Launch terminal.</li>
+							<li>Type 'steam' and hit enter.</li>
+							<li>Each time it stops writing to terminal use KDE to close the update Window in the task bar.</li>
+							<li>Do this for each Window.</li>
+							<li>Eventually it should continue to login-screen etc.</li>
+						</ol>
+					</li>
+					<li>If Steam Login is having issues on Gamescope, use the Weston, Cage etc compositor instead</li>
+					<li>Some games don't fully quit until you press the Guide/Xbox button.</li>
+				</ul>
+			</div>
+
+			<div class="Content">
+				<h2>Bluetooth Troubleshooting</h2>
+				<ul>
+					<li>Xbox Controllers may need their firmware updated from an Xbox or Windows device before they work correctly.</li>
+				</ul>
+			</div>
+
+			<div class="Content">
+				<h2>Update Troubleshooting</h2>
+				<ul>
+					<li>If system is having 'pacman' update issues:
+						<ol>
+							<li>Go to terminal and type these lines...</li>
+							<li><code>sudo pacman -Sy</code></li>
+							<li><code>sudo timedatectl set-ntp true</code></li>
+							<li><code>sudo hwclock --systohc</code></li>
+							<li><code>COUNTRY=$(curl -s https://ifconfig.co/country-iso)</code></li>
+							<li><code>sudo reflector --country $COUNTRY --latest 50 --protocol https --sort rate --save /etc/pacman.d/mirrorlist</code></li>
+							<li><code>sudo pacman -Syyu</code></li>
+							<li><code>sudo pacman -Sy archlinux-keyring</code></li>
+							<li><code>sudo pacman-key --init</code></li>
+							<li><code>sudo pacman-key --populate archlinux</code></li>
+							<li><code>sudo pacman-key --refresh-keys</code></li>
+							<li><code>sudo pacman-key --updatedb</code></li>
+							<li><code>sudo pacman -Syu</code></li>
+							<li><code>yay -Syu</code></li>
+							<li><code>reboot</code></li>
+						</ol>
+					</li>
+					<li>If "Check Updates" button not working or Control-Center not launching:
+						<ol>
+							<li>Go to a terminal</li>
+							<li><code>cd ReignOS/Management</code></li>
+							<li><code>git pull</code></li>
+							<li><code>dotnet publish -r linux-x64 -c Release</code></li>
+							<li><code>exit</code></li>
+						</ol>
+					</li>
+					<li>Manually connect to WiFi:
+						<ol>
+							<li><code>iwctl device list</code> (NOTE: this will get you devices like wlan0)</li>
+							<li><code>iwctl station wlan0 scan</code></li>
+							<li><code>iwctl station wlan0 get-networks</code></li>
+							<li><code>iwctl station --passphrase '&lt;PASS&#62;' wlan0 connect '&lt;SSID&#62;'</code></li>
+						</ol>
+					</li>
+				</ul>
+			</div>
+
+			<div class="Content">
+				<h2>Virtual Box</h2>
+				<ul>
+					<li>Virtual Box is not really tested but you should run these commands if you're using it:
+						<ol>
+							<li><code>sudo pacman -S virtualbox-guest-utils</code></li>
+							<li><code>sudo modprobe vboxguest</code></li>
+							<li><code>sudo modprobe vboxsf</code></li>
+							<li><code>sudo modprobe vboxvideo</code></li>
+							<li><code>sudo systemctl enable vboxservice.service</code></li>
+							<li><code>reboot</code></li>
+						</ol>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<footer></footer>
+	</body>
 </html>
