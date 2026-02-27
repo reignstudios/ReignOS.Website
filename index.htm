@@ -432,12 +432,26 @@
 							<li>Type: <code>exit</code>.</li>
 						</ol>
 					</li>
-					<li>Change Nvidia drivers without Control-Center:
+					<li>Change Nvidia or AMD drivers without Control-Center:
 						<ol>
 							<li>Exit to terminal.</li>
 							<li>Type: <code>cd ~/ReignOS/Managment/ReignOS.Bootloader/bin/Release/net8.0/linux-x64/publish</code>.</li>
 							<li>Type: <code>'./Nvidia_Install_Nouveau.sh'</code> or <code>'./Nvidia_Install_Proprietary.sh'</code>.</li>
 							<li>NOTE: Same for AMD.</li>
+						</ol>
+					</li>
+					<li>Nvidia systems that require Proprietary driver to function:
+						<ol>
+							<li>When booting installer, boot with Nouveau disabled</li>
+							<li>In installer disable Nouveau when installing</li>
+							<li>After install is complete, apply Proprietary drivers in Control-Center</li>
+						</ol>
+					</li>
+					<li>Older AMD systems and Vulkan support:
+						<ol>
+							<li>In Control-Center click "Kernel" button</li>
+							<li>Check the "radeon.cik_support=0 amdgpu.cik_support=1" checkbox and click Apply</li>
+							<li>After reboot you can validate Vulkan is working using "vkmark" in KDE (it should NOT be llvmpipe)</li>
 						</ol>
 					</li>
 					<li>Disable Steam GPU acceleration in Control-Center can work around some Nvidia issues.</li>
